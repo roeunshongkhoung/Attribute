@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attributes</title>
+</head>
+<style>
+  header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+#updateAlert{
+  border-radius: 20px;
+  width: 200px;
+  height: 30px;
+  background-color: hotpink;
+  color: white;
+}
+</style>
+<body>
+  <header>
+  <h1>ARIA Attributes Proof</h1>
+</header>
+<section>
+  <div id="example" role="alert" aria-live="assertive" aria-label="Important Alert">
+    This is a dynamic alert area.
+  </div>
+</section>
+<main>
+  <button id="updateAlert">Trigger Alert</button>
+</main>
+  <script>
+    const alertDiv= document.getElementById('example');
+    const button= document.getElementById('updateAlert');
+
+    button.addEventListener('click' , () => {
+      alertDiv.textContent = 'Update to full name: Roeun Shongkhoung';
+    });
+  </script>
+</body>
+
+</html>
